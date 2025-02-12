@@ -18,7 +18,17 @@ function adicionarAmigo() {
     listaDeAmigosSecretos.push(nome);
     inputNome.value = "";
     console.log(listaDeAmigosSecretos);
-    let li = document.createElement("li");
+   
+}
+
+// Função para atualizar a lista de amigos na tela
+function atualizarLista() {
+    let listaAmigos = document.getElementById("listaAmigos");
+    listaAmigos.innerHTML = ""; // Limpa a lista antes de atualizar
+
+    amigos.forEach((nome) => {
+        let li = document.createElement("li");
         li.textContent = nome;
         listaAmigos.appendChild(li);
+    });
 }
